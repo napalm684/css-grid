@@ -12,7 +12,7 @@
   <div class="container">
     <div class="item">1</div>
     <div class="item">2</div>
-    <div class="item">3</div>
+    <div class="item">Wes Bos Is Cool</div>
     <div class="item">4</div>
     <div class="item">5</div>
     <div class="item">6</div>
@@ -30,7 +30,12 @@
   <style>
     .container {
       display: grid;
+      height: 600px; /* this allows the frs used in row template to make cells bigger */
+      border: 10px solid var(--yellow);
       grid-gap: 20px;
+      /* grid-template-columns: 1fr 1fr 1fr 1fr; /* FR (fractional but also call it free space) is whatever is left */
+      /* grid-template-rows: 1fr 1fr 1fr 1fr; /* Default height of element is height of contents so this doesnt do anything */
+      grid-template-columns: auto 1fr auto 1fr; /* entire column gets wider based on contents of wides element */
     }
   </style>
 </body>

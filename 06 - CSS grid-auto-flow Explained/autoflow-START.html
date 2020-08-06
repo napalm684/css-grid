@@ -12,12 +12,34 @@
   <div class="container">
     <div class="item">1</div>
     <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
+    <div class="item">3</div>
   </div>
 
   <style>
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: 400px 200px; /* Grid default flow says you have three items add a row,
+                                             so how do we make it add a column if we want a horizontal layout */
+      grid-auto-flow: column; /* This is how */
+      grid-auto-columns: 200px; /* Any implicit columns 200 width */
     }
   </style>
 </body>

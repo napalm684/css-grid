@@ -21,7 +21,13 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
-      grid-template-columns: repeat(auto-fill, 150px);
+      /* 
+        This can replace media queries you are saying at a minimum the column is 150px, but at a max
+        a fraction of the entire grid. At a certain point they dont fit they wrap
+      */
+      /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+      /*grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* this will just not add columns it keeps it fit or wraps when it doesnt */
+      grid-template-columns: fit-content(100px) 150px 150px 150px; /* clamps first column at 100px wide */
     }
   </style>
 </body>

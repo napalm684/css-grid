@@ -19,16 +19,19 @@
     <div class="item">7</div>
     <div class="item">8</div>
     <div class="item">9</div>
-    <div class="item">10</div>
+    <div class="item">10</div> 
   </div>
+
   <style>
-    /* Makes every item in container implicitly a grid item */
     .container {
       display: grid;
-      /* grid-template-columns: repeat(5, 100px); */
+      /*grid-template-columns: 100px 100px 100px; /* Three columns each 100px */
+      /*grid-template-columns: 200px 500px 50px; /* Three columns total 750px across plus gap*/
+      /*grid-template-columns: 100px auto 500px 50px; /* Four columns the second one is responsive */
+      /*grid-template-columns: repeat(5, 100px); /* Shorthand 5 columns 100px wide */
       grid-template-columns: 200px 500px;
-      grid-template-rows: 200px 100px 400px;
-      grid-gap: 20px;
+      grid-template-rows: 200px 100px 400px; /* Set the height over three rows */
+      grid-gap: 20px; /* Spacing between columns and rows (tracks) */
     }
   </style>
 </body>
