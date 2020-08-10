@@ -14,13 +14,13 @@
     <div class="itm itm2">2</div>
     <div class="itm itm3">3</div>
     <div class="itm itm4">4</div>
-    <div class="itm itm5">5</div>
+    <div class="itm itm5">Wes is Cool</div>
     <div class="itm itm6">6</div>
     <div class="itm itm7">7</div>
     <div class="itm itm8">8</div>
     <div class="itm itm9">9</div>
     <div class="itm itm10">10</div>
-    <div class="itm itm11">11</div>
+    <!-- <div class="itm itm11">11</div>
     <div class="itm itm12">12</div>
     <div class="itm itm13">13</div>
     <div class="itm itm14">14</div>
@@ -49,7 +49,7 @@
     <div class="itm itm37">37</div>
     <div class="itm itm38">38</div>
     <div class="itm itm39">39</div>
-    <div class="itm itm40">40</div>
+    <div class="itm itm40">40</div> -->
   </div>
 
   <style>
@@ -68,9 +68,30 @@
     */
 
     .container {
+      border: 10px solid var(--yellow);
       display: grid;
+      height: 500px; /* fixed height of grid doesnt happen often */
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      grid-template-columns: repeat(5, 130px);
+      /* grid-template-rows: repeat(5, 100px); */
+      /*justify-items: center; /* default justify items is stretch, center centers it in column only content width */
+      /* justify-items: start; /* start of column */
+      /*justify-items: end; /* end of column (interchangable flex-start/flex-end) */
+      /*align-items: center; /* top of row end bottom center center, stretch all the way */
+      /* place-items: center center; /* shorthand for above */
+      place-items: stretch stretch;
+      /* justify-content: space-around; /* start end center but space-around makes it all even either side of column */
+      justify-content: space-between; /* above has a thin empty margin on left/right of all cells this just does between cells */
+      align-content: space-between;
+    }
+
+    .itm {
+      background: white;
+    }
+
+    .itm5 {
+      justify-self: center; /* override of align/justify grid settings on case/case basis */
+      align-self: center; /* no height on row so not doing anything currently */
     }
   </style>
 </body>

@@ -21,6 +21,22 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: repeat(10, 1fr);
+    }
+
+    .content {
+      grid-column: 1 / -1;
+      order: 3;
+    }
+
+    .nav {
+      grid-column: span 8;
+      order: 1; /* zero indexed ordering will screw up selectors and accessibility as an FYI. selecting txt is goofy too */
+    }
+
+    .logo {
+      grid-column: span 2;
+      order: 2;
     }
   </style>
 </body>
