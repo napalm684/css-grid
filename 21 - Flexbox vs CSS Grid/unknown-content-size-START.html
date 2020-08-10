@@ -10,7 +10,7 @@
 
 <body>
 
-  <!-- Known Columns, Unknown Content Width -->
+  <!-- For Known Columns, Unknown Content Width -->
 
   <div class="container known">
     <div class="item">Short</div>
@@ -24,6 +24,10 @@
   <style>
     .known {
       margin: 100px 0;
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      justify-content: center;
+      grid-gap: 20px;
     }
   </style>
 

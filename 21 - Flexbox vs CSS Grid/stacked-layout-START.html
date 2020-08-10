@@ -19,7 +19,13 @@
   </div>
 
   <style>
-    .stacked {}
+    /* so for grid we can't get the finished look columns are rigid not staggered
+      we have to use flex for this */
+    .stacked {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
 
     .stacked>* {
       width: 30%;
